@@ -44,7 +44,7 @@ public class RCWL0516Driver {
 	private RCWL0516GpioPinListenerDigital rcwl0516Listener;
 
 	synchronized public static RCWL0516Driver getInstance() {
-		return getInstance(RaspiPin.GPIO_10, null);
+		return getInstance(RaspiPin.GPIO_18, null);
 	}
 
 	synchronized public static RCWL0516Driver getInstance(Pin gpioPin) {
