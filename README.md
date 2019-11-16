@@ -15,7 +15,10 @@ for gpio communication in java and have confirmed that it works in Raspberry Pi 
 - [GPIO of Raspberry Pi 3B](https://www.raspberrypi.org/documentation/usage/gpio/README.md)
   - Vin --> (2) or (4)
   - GND --> (6), (9), (14), (20), (25), (30), (34) or (39)
-  - PWM --> (12) GPIO18, (35) GPIO19, (32) GPIO12 or (33) GPIO13
+  - PWM --> (12) GPIO18, (35) GPIO19, (32) GPIO12 or (33) GPIO13  
+  **Note. (12) GPIO18 and (32) GPIO12 cannot be used to generate different PWM signals at the same time.
+Similarly, (35) GPIO19 and (33) GPIO13 cannot be used to generate different PWM signals at the same time.
+Therefore, as an example, when (12) GPIO18 is in use, (32) GPIO12 cannot be used, but instead, either (35) GPIO19 or (33) GPIO13 can be used.**
   
 ## Install Raspbian Buster Lite OS (2019-07-10)
 The reason for using this version is that it is the latest as of July 2019 and [BlueZ](http://www.bluez.org/) 5.50 is included from the beginning, and use Bluetooth and serial communication simultaneously.
